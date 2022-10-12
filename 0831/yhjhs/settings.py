@@ -33,9 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # 내앱
     'articles',
-    'django_extensions',
+    'accounts',
     # 서드 파티앱
-    
+    'django_extensions',
     # 장고앱
     'django.contrib.admin',
     'django.contrib.auth',
@@ -129,3 +129,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.User'

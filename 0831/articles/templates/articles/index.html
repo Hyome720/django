@@ -2,7 +2,7 @@
 
 {% block content %}
   <h2>첫 페이지</h2>
-  <a href="{% url 'articles:new' %}">새로 만들기</a>
+  <a href="{% url 'articles:create' %}">새로 만들기</a>
   <hr>
   {% for article in articles %}
     <a href="{% url 'articles:detail' article.pk %}">세부사항</a>

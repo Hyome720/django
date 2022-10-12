@@ -4,10 +4,7 @@
   <h1>새로 만들기</h1>
   <form action="{% url 'articles:create' %}" method="POST">
     {% csrf_token %}
-    <label for="name">이름: </label>
-    <input type="text" name="name"><br>
-    <label for="age">나이: </label>
-    <textarea name="age" cols="30" rows="5"></textarea><br>
+    {{ form.as_p }}
     <input type="submit">
   </form>
   <hr>
