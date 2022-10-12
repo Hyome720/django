@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>새로 만들기</h1>
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% csrf_token %}
+    <label for="name">이름: </label>
+    <input type="text" name="name"><br>
+    <label for="age">나이: </label>
+    <textarea name="age" cols="30" rows="5"></textarea><br>
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'articles:index' %}">처음으로 가기</a>
+{% endblock content %}
